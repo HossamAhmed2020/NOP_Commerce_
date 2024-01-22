@@ -11,7 +11,7 @@ Feature:F02 | user can login with valid data
     Then user navigate to home page
     Examples:
       | Email|
-      |Hos123@gmail.com|
+      |Hos1234@gmail.com|
 
     # Negative Scenario
 #  Scenario : to login with invalid data

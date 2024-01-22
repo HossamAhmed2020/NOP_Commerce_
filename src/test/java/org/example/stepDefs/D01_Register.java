@@ -41,7 +41,7 @@ public class D01_Register {
 
     @And("user entre Email")
     public void userEntreEmail() {
-        reg.Email.sendKeys("Hos123@gmail.com");
+        reg.Email.sendKeys("Hos1234@gmail.com");
 
 //
 //        Faker fakemail = new Faker();

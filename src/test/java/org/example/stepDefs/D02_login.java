@@ -19,27 +19,19 @@ public class D02_login {
             login01.login_page.click();
         }
 
-           // login01.email.sendKeys();
-
-
-//        driver.findElement(By.id("Email")).sendKeys("Hos@gmail.com");
-//        driver.findElement(By.id("Password")).sendKeys("hos555");
-//        driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]")).click();
-
-
 
         @Then("user navigate to home page")
         public void userNavigateToHomePage() {
-           // SoftAssert soft = new SoftAssert();
-
+//            SoftAssert soft = new SoftAssert();
+//
 //        String CurrentText = driver.findElement(By.className("result")).getText();
 //
 //        soft.assertEquals(CurrentText.toLowerCase(), "your registration completed");
-
+//
 //            String CurrentColor = driver.findElement(By.className("result")).getCssValue("color");
 //            soft.assertEquals(CurrentColor, "rgba(76, 177, 124, 1)");
-
-         //   soft.assertAll();
+//
+//            soft.assertAll();
 
         }
 

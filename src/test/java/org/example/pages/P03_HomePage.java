@@ -5,16 +5,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import static org.example.stepDefs.Hooks.driver;
-public class P03_homePage {
-    public P03_homePage(){PageFactory.initElements(driver,this);}
+public class P03_HomePage {
+    public P03_HomePage(){PageFactory.initElements(driver,this);}
     @FindBy(id = "customerCurrency")
     public WebElement Currency_list;
-    @FindBy (xpath = "//*[@id=\"customerCurrency\"]/option[2]")
-    public WebElement Euro;
-    @FindBy (id = "small-searchterms")
+    @FindBy (css = "input[id=\"small-searchterms\"]")
     public WebElement search_field;
-    @FindBy (className = "button-1 search-box-button")
+    @FindBy (css = "button[class=\"button-1 search-box-button\"]")
     public WebElement search_botton;
+  @FindBy (css = "div[class=\"details\"]>h2>a")
+    public WebElement product;
+  @FindBy(id ="sku-17")
+    public WebElement SKU;
 
 
 
