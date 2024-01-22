@@ -13,10 +13,18 @@ public class P03_HomePage {
     public WebElement search_field;
     @FindBy (css = "button[class=\"button-1 search-box-button\"]")
     public WebElement search_botton;
-  @FindBy (css = "div[class=\"details\"]>h2>a")
+    @FindBy (css = "div[class=\"details\"]>h2>a")
     public WebElement product;
-  @FindBy(id ="sku-17")
+    @FindBy(id ="sku-17")
     public WebElement SKU;
+    @FindBy(className = "facebook")
+    public WebElement facebook;
+    @FindBy(className = "twitter")
+    public WebElement twitter;
+    @FindBy(className = "rss")
+    public WebElement rss;
+    @FindBy(className = "youtube")
+    public WebElement youtube;
 
 
 
