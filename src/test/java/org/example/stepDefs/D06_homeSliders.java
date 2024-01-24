@@ -4,24 +4,45 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.P03_HomePage;
+import org.testng.asserts.SoftAssert;
+
+import java.util.concurrent.TimeUnit;
+
+import static org.example.stepDefs.Hooks.driver;
 
 public class D06_homeSliders {
     P03_HomePage soldir=new P03_HomePage();
-    @When("user search for  Nokia Lumia 1020")
-    public void search_item(){
-        soldir.search_field.sendKeys("Nokia Lumia 1020");
-        soldir.search_botton.click();
+    SoftAssert soft =new SoftAssert();
+
+      //first scenario
+    @When("user select first slider item")
+    public void userSelectFirstSliderItem() {
+        soldir.icon1.click();
+        soldir.first_slider.click();
 
     }
-
-
-
-
-    @Then("check current url")
+    @Then("check current first url")
     public void checkCurrentUrl() {
+        String Act_url=driver.getCurrentUrl();
+        String Exp_url="https://demo.nopcommerce.com/nokia-lumia-1020";
+        soft.assertEquals(Act_url,Exp_url);
+        soft.assertAll();
     }
 
-    @And("user select  {string}")
-    public void userSelect(String arg0) {
+
+     //second scenario
+    @When("user select  second slider item")
+    public void userSelectSecondSliderItem() {
+        soldir.icon2.click();
+        soldir.second_slider.click();
+    }
+
+    @Then("check current second url")
+    public void checkCurrentUrl_() {
+        String Act_url=driver.getCurrentUrl();
+        String Exp_url="https://demo.nopcommerce.com/nokia-lumia-1020";
+        soft.assertEquals(Act_url,Exp_url);
+        soft.assertAll();
+
     }
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,8 +31,8 @@ public class prac {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://demo.nopcommerce.com/");
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        driver.get("https://demo.nopcommerce.com");
 
 
     }
@@ -105,7 +106,38 @@ public class prac {
 
     }
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
+
+
+
+driver.findElement(By.cssSelector("a[rel=\"1\"]")).click();
+//        driver.findElement(By.xpath("(//a[@class=\"nivo-imageLink\"])[1]")).click();
+//        driver.manage().timeouts().implicitlyWait(3500, TimeUnit.MILLISECONDS);
+        driver.findElement(By.xpath("(//a[@class=\"nivo-imageLink\"])[2]")).click();
+
+
+        /*
+        driver.findElement(By.className("facebook")).click();
+        driver.getWindowHandles();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Get the URL of the current page
+        String currentUrl = driver.getTitle();
+        System.out.println("Current URL: " + currentUrl);;
+
+
+         */
+
+
+
+
+
+
+
 //        List<WebElement> products = new ArrayList<>();
 //        products.add(driver.findElement(By.cssSelector("a[href=\"/computers\"]")));
 //        products.add(driver.findElement(By.cssSelector("a[href=\"/electronics\"]")));

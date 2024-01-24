@@ -13,6 +13,14 @@ public class P03_HomePage {
     public WebElement search_field;
     @FindBy (css = "button[class=\"button-1 search-box-button\"]")
     public WebElement search_botton;
+    @FindBy(css = "a[rel=\"0\"]")
+    public WebElement icon1;
+    @FindBy(css = "a[rel=\"1\"]")
+    public WebElement icon2;
+    @FindBy (xpath ="(//a[@class=\"nivo-imageLink\"])[1]")
+    public WebElement first_slider;
+    @FindBy(xpath ="(//a[@class=\"nivo-imageLink\"])[2]")
+    public WebElement second_slider;
     @FindBy (css = "div[class=\"details\"]>h2>a")
     public WebElement product;
     @FindBy(id ="sku-17")
