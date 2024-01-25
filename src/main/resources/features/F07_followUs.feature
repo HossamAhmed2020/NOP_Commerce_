@@ -1,3 +1,4 @@
+@smoke
 Feature:F07_followUs| users could open followUs links
   ##Scenario1
  Scenario Outline: user opens facebook link

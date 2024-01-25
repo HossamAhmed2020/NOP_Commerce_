@@ -24,7 +24,6 @@ public class D05_hoverCategories {
             Actions act = new Actions(driver);
         act.moveToElement(Li.get(randomIndex)).perform();
             // Click on the randomly selected item
-           // Li.get(randomIndex).click();
         } else {
             System.out.println("No items found in the list.");
         }
@@ -39,13 +38,8 @@ public class D05_hoverCategories {
         } else {
             System.out.println("No sub-categories found in the selected main category.");
         }
-
-
-
-
-
-
     }
+
 
     @And("user select item")
     public void userSelectItem() {

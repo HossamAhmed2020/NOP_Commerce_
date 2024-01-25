@@ -15,5 +15,9 @@ public class P02_login {
     public WebElement password;
     @FindBy(css = "button[class=\"button-1 login-button\"]")
     public WebElement login_button;
+    @FindBy(className = "ico-account")
+    public WebElement my_account;
+    @FindBy(css ="div[class=\"message-error validation-summary-errors\"]")
+    public WebElement login_error_msg;
 
 }

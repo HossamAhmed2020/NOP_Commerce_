@@ -106,14 +106,22 @@ public class prac {
 
     }
     @Test
-    public void test01() throws InterruptedException {
+    public void test01(){
+        SoftAssert soft = new SoftAssert();
 
+        driver.findElement(By.className("ico-login")).click();
+        driver.findElement(By.id("Email")).sendKeys("hsu24@dxc");
+        driver.findElement(By.id("Password")).sendKeys("dsfs55");
+        driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]")).click();
+        String CurrentText =driver.findElement(By.cssSelector("div[class=\"message-error validation-summary-errors\"]")).getText().toLowerCase();
+        System.out.println(CurrentText);
+        soft.assertTrue(CurrentText.contains("login was unsuccessful"));
 
+        String CurrentColor =driver.findElement(By.cssSelector("div[class=\"message-error validation-summary-errors\"]")).getCssValue("color");
+        soft.assertEquals(CurrentColor, "rgba(228, 67, 75, 1)");
 
-driver.findElement(By.cssSelector("a[rel=\"1\"]")).click();
-//        driver.findElement(By.xpath("(//a[@class=\"nivo-imageLink\"])[1]")).click();
-//        driver.manage().timeouts().implicitlyWait(3500, TimeUnit.MILLISECONDS);
-        driver.findElement(By.xpath("(//a[@class=\"nivo-imageLink\"])[2]")).click();
+        soft.assertAll();
+
 
 
         /*

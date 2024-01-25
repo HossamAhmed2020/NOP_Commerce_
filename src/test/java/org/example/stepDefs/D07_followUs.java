@@ -18,8 +18,7 @@ public class D07_followUs {
     public void facebook(){
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         icon.facebook.click();
-//        ArrayList<String> tabs=new ArrayList<>(driver.getWindowHandles());
-//        driver.switchTo().window(tabs.get(1));
+
     }
 
     @Then("the link of facebook will open in new tap{string}")
